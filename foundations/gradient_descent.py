@@ -1,9 +1,9 @@
 class Solution:
     def get_minimizer(self, iterations: int, learning_rate: float, init: int) -> float:
-        x = init
+        minimizer = init
 
         for _ in range(iterations):
-            gradient = 2 * x
-            x = x - learning_rate * gradient
+            derivative = 2 * minimizer
+            minimizer = minimizer - learning_rate * derivative
 
-        return round(x, 5)
+        return round(minimizer, 5)
